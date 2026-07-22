@@ -67,6 +67,10 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 Monthly Duty Doctor Roster Server running on port ${PORT}`);
-});
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`🚀 Monthly Duty Doctor Roster Server running on port ${PORT}`);
+  });
+}
+
+export default app;
