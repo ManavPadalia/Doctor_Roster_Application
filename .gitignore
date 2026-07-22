@@ -101,3 +101,4 @@ node_modules/
 # OS metadata
 .DS_Store
 Thumbs.db
+.vercel
